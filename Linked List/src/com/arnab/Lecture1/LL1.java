@@ -1,5 +1,7 @@
 package com.arnab.Lecture1;
 
+import com.arnab.Lecture2.LLRec;
+
 import java.util.LinkedList;
 
 public class LL1 {
@@ -18,7 +20,7 @@ public class LL1 {
         LinkedList<Integer> list= new LinkedList<Integer>(); //In built in java
         list.add(24); //Adding an element
 
-        CLL();
+        LLRec();
     }
     public static void singleLL(){
         //refer to LL for custom Linked List
@@ -65,5 +67,18 @@ public class LL1 {
         li.display();
         li.delete(8);
         li.display();
+    }
+
+    public static void LLRec(){
+        LLRec li= new LLRec();
+        li.insertFirst(5);
+        li.insertFirst(8);
+        li.insertFirst(7);
+        li.insertFirst(9);
+        li.insertFirst(76);
+        li.display();
+        li.insertRec(45, 2);
+        li.display();
+
     }
 }
