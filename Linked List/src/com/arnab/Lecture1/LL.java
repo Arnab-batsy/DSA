@@ -1,11 +1,16 @@
 package com.arnab.Lecture1;
 
+//Most important things for questions-
+//1. In-place reversal of Linked list
+//2. Fast and slow pointer
+//3. Recursion and Linked list
+
 public class LL {
     //Custom Linked List
 
-    private Node head;
-    private Node tail;
-    private int size;
+    protected Node head;
+    protected Node tail;
+    protected int size;
 
     public LL() {
         this.size = 0;
@@ -116,11 +121,20 @@ public class LL {
         System.out.println("END");
     }
 
-    private class Node {
+    public void display(Node head) {
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.value + " -> ");
+            temp = temp.next;
+        }
+        System.out.println("END");
+    }
+
+    protected class Node {
         //Custom Node
 
-        private int value;
-        private Node next;
+         public int value;
+         public Node next;
         //By default, the value of next is Null when no object is provided.
 
         public Node(int value) {
